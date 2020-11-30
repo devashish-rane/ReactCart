@@ -15,7 +15,7 @@ export default class Product extends Component {
        const {id,title,img,price,company,inCart} = this.props.product;
 
        return (
-            <ProductWrapper className="card  col-md-2 col-sm-4 ml-5 mt-3 " style={{width:"18rem"}} >
+            <ProductWrapper className="card  col-md-2 col-sm-4 ml-5 mt-5 " style={{width:"18rem"}} >
              
 {/* consumer of context */}
               <DataConsumer>
@@ -34,6 +34,7 @@ export default class Product extends Component {
                         onClick={()=>data.addToCart(id)}>
                         {inCart? (<p className="mb-0" disabled >In cart</p>) :(<i class="fa fa-cart-plus mr-3" aria-hidden="true"></i> ) }
                         </button>
+
                         <h5 style={{display:"inline-block",marginRight:"40px"}} className="card-title float-right">{price}<span className="mr-5">$</span></h5>
                       </div>
                       </> 
